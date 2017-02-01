@@ -1,0 +1,110 @@
+* {
+    margin:0; 
+    padding:0; 
+    outline:none;
+}
+._boxSizing{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+#slider{
+    width: 442px;
+    height: 100px;
+    margin: 0 auto;
+}
+
+.main_carousel {
+    position: relative;
+    .main_carousel_in {
+        float: left;
+        width: 310px;
+        overflow: hidden;
+    }
+  ul {
+     transition: all .5s linear;
+  }
+    ul li {
+        float: left;
+        width: 100px;
+        height: 100px;
+        margin-right: 5px;
+        list-style: none;
+        text-align: center; 
+        position: relative;
+        cursor: pointer;
+      
+      -moz-transition: all 1s ease-out;
+      -webkit-transition: all 1s ease-out;
+      transition: all 1s ease-out;
+        &.item_1{background: url(https://sc02.alicdn.com/kf/HTB1A_qzKXXXXXcNXXXXq6xXFXXX1/Adult-new-style-beautiful-woman-nursing-bra.jpg_100x100.jpg) no-repeat 0 0;}
+        &.item_2{background: url(http://ladydays.ru/wp-content/uploads/2016/11/woman-dream-100x100.jpg) no-repeat 0 0;}
+        &.item_3{background: url(https://pp.vk.me/c626117/v626117941/4c537/hlOLeDxZkgk.jpg) no-repeat 0 0;}
+        &.item_4{background: url(http://ladydays.ru/wp-content/uploads/2016/11/woman-skate-100x100.jpg) no-repeat 0 0;}
+        &.item_5{background: url(https://yt3.ggpht.com/-deaBVBjEIf0/AAAAAAAAAAI/AAAAAAAAAAA/MyZMDlzIsYs/s100-c-k-no-mo-rj-c0xffffff/photo.jpg) no-repeat 0 0;}
+        &.item_6{background: url(http://he77ga.ru/assets/components/phpthumbof/cache/big05_crop01.b569c10df18776dd4e85766ff1d3f1c051.jpg) no-repeat 0 0;}
+        &.item_7{background: url(http://ladydays.ru/wp-content/uploads/2016/11/woman-happy1-100x100.jpg) no-repeat 0 0;}
+        &.item_8{background: url(https://pp.vk.me/c636618/v636618222/5410a/4TSkSWUuFGI.jpg) no-repeat 0 0;}
+        &:after{
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+        &:hover {
+           -webkit-transform: scale(1.1);
+           -moz-transform: scale(1.1);
+           -o-transform: scale(1.1);
+        }
+        &:hover:after{
+            background: rgba(0, 0, 0, 0.3);
+        }
+        .slide_info{
+            ._boxSizing;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 18px;
+            width: 100%;
+            padding: 0 5px;
+            background: fade(#505460, 50%);
+            z-index: 20;
+            p{
+                float: right;
+                color: #fff;
+            }
+            .icon{
+                float: left;
+                width: 44px;
+                height: 13px;
+                margin-top: 2px;
+            }
+        }
+    }
+    .carousel_btn {
+        display: block;
+        width: 66px;
+        height: 100px;
+        background-image: url(http://static.thumbdn.com/landing/resource/id/adf6caebef7acca7cd2958936b2fd432.jpg);
+        background-repeat: no-repeat;
+        background-position: 25px center;
+        &.disable {
+            opacity: 0.3;
+        }
+    }
+    #prev_btn {
+        float: left;
+    }
+    #next_btn {
+        float: right;
+        -webkit-transform: rotate(180deg);
+        -moz-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        transform: rotate(180deg);
+    }    
+}

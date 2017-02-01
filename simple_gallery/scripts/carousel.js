@@ -7,6 +7,7 @@ $(function() {
   var $next_btn = $('.main_carousel a#next_btn');
   var visiblePhoto = 3;  
   var currentPosSuccess = 0;
+  var widthCarouselItem = $successLi.outerWidth( true );
   // end: variables
   
   // settings
@@ -15,7 +16,7 @@ $(function() {
   // end: settings
   
   // init
-  carousel.width(105 * successLength);
+  carousel.width(widthCarouselItem * successLength);
   // end: init
     
   // click
@@ -33,7 +34,7 @@ $(function() {
   
   function sliderMove() {
     console.log("sliderMove currentPosSuccess:" + currentPosSuccess);
-    carousel.css("margin-left", (currentPosSuccess * (-105)) + 'px');
+    carousel.css("margin-left", (currentPosSuccess * (-widthCarouselItem)) + 'px');
   }
   function checkedPositionNext() {
     
